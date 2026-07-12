@@ -84,11 +84,10 @@ h1 {
     background-color: #ff6b81;
 }
 .game-image {
-    width: 100%;
-    max-width: 280px; /* Contraint la largeur pour simuler une taille de téléphone */
-    height: auto; /* La magie est ici : ça laisse le GIF prendre toute sa hauteur naturelle ! */
-    border-radius: 15px; /* Un poil plus arrondi pour rappeler les bords d'un smartphone */
-    margin: 0 auto 1.5rem auto; /* Centre parfaitement le GIF horizontalement */
-    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
-    display: block; /* Indispensable pour que le centrage fonctionne */
+    width: 100%; /* L'image prendra 100% de la largeur disponible dans la carte */
+    height: auto; /* Le ratio du GIF sera respecté sans déformer ta voiture */
+    border-radius: 10px; /* Bords légèrement arrondis pour coller au design global */
+    margin-bottom: 1.5rem; /* Espace en dessous de l'image avant le bouton */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    display: block;
 }
