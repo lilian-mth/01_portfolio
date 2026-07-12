@@ -17,11 +17,16 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
-    /* Ces 3 lignes forcent la page à faire exactement la taille de l'écran sans dépasser */
-    height: 100dvh; 
-    overflow: hidden; 
+    
+    /* On utilise min-height et svh pour s'adapter à la barre de nav */
+    min-height: 100svh; 
+    
+    /* On remet le scroll au cas où l'écran est vraiment minuscule (iPhone SE) */
+    overflow-y: auto; 
+    overflow-x: hidden;
+    
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Aligne vers le haut au lieu du centre pour ne jamais couper le titre */
     align-items: center;
 }
 
@@ -31,8 +36,9 @@ body {
     align-items: center;
     width: 100%;
     max-width: 450px;
-    height: 100%;
+    min-height: 100%;
     padding: 1rem 1rem 2rem 1rem;
+    margin: auto; /* C'est la magie qui centre verticalement en toute sécurité */
 }
 
 header {
