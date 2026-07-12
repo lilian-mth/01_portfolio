@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lilian Mathieu - Développeur Indépendant</title>
-    <!-- On relie le fichier CSS ici -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,32 +14,19 @@
     </header>
 
     <div class="container">
-        <h2>Mes Jeux</h2>
-
-        <!-- Section du jeu actuel -->
+        <!-- Section unique dédiée au jeu du moment -->
         <section class="game-card highlight">
-            <h3 class="game-title">Pizza Drift</h3>
-            <p class="game-desc">Arpentez les rues d'une carte de Paris faite main et livrez un maximum de pizzas !</p>
+            <h2 class="game-title">Pizza Drift</h2>
             
-            <!-- C'est ICI que tu mets ton image/GIF. 
-                 Assure-toi que le nom du fichier correspond à ce que tu as dans ton dossier -->
-            <img src="assets/pizza-drift.gif" alt="Gameplay de Pizza Drift" class="game-image">
+            <p class="game-desc">
+                Démarrez en trombe et partez à l'assaut d'une grande carte de Paris entièrement faite main ! Livrez un maximum de pizzas pour dominer le classement asynchrone et prouver que vous êtes le meilleur livreur de la capitale.
+            </p>
+            <img src="assets/gameplay.gif" alt="Gameplay Pizza Drift" class="game-image">
             
-            <a href="https://pizzadrift.liliandev.com" class="play-button">Jouer maintenant</a>
-        </section>
-
-        <!-- Section de l'ancien jeu -->
-        <section class="game-card secondary-game">
-            <h3 class="game-title">Ninja Tower</h3>
-            <p class="game-desc">Mon premier jeu d'arcade 2D pixel art sans fin avec mécanique de wall-jump.</p>
-            <p class="warning-text"><em>Note : La base de données du classement peut mettre quelques secondes à se réveiller, soyez patients !</em></p>
-            
-            <!-- Remplace "#" par le vrai lien de ton jeu Ninja Tower -->
-            <a href="https://ninja-tower.vercel.app/" class="play-button outline">Tester le jeu</a>
+            <a href="https://pizzadrift.liliandev.com" class="play-button">JOUER MAINTENANT</a>
         </section>
     </div>
 
-    <!-- On relie le fichier Javascript tout en bas -->
     <script src="script.js"></script>
 </body>
 </html>
