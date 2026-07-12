@@ -85,9 +85,10 @@ h1 {
 }
 .game-image {
     width: 100%;
-    max-height: 500px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    max-width: 280px; /* Contraint la largeur pour simuler une taille de téléphone */
+    height: auto; /* La magie est ici : ça laisse le GIF prendre toute sa hauteur naturelle ! */
+    border-radius: 15px; /* Un poil plus arrondi pour rappeler les bords d'un smartphone */
+    margin: 0 auto 1.5rem auto; /* Centre parfaitement le GIF horizontalement */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+    display: block; /* Indispensable pour que le centrage fonctionne */
 }
