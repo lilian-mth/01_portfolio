@@ -2,29 +2,47 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Le meta viewport est optimisé pour bloquer le zoom et forcer l'affichage mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Lilian Mathieu - Développeur Indépendant</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2.0">
 </head>
 <body>
 
-    <header>
-        <h1>Lilian Mathieu</h1>
-        <p class="subtitle">Développeur de jeux indépendants</p>
-    </header>
+    <div class="app-wrapper">
+        <header>
+            <h1>Lilian Mathieu</h1>
+            <p class="subtitle">Développeur de jeux indépendants</p>
+        </header>
 
-    <div class="container">
-        <!-- Section unique dédiée au jeu du moment -->
-        <section class="game-card highlight">
-            <h2 class="game-title">Pizza Drift</h2>
-            
-            <p class="game-desc">
-                Démarrez en trombe et partez à l'assaut d'une grande carte de Paris entièrement faite main ! Livrez un maximum de pizzas pour dominer le classement asynchrone et prouver que vous êtes le meilleur livreur de la capitale.
-            </p>
-            <img src="assets/gameplay.gif" alt="Gameplay Pizza Drift" class="game-image">
-            
-            <a href="https://pizzadrift.liliandev.com" class="play-button">JOUER MAINTENANT</a>
-        </section>
+        <main class="container">
+            <section class="game-card">
+                <h2 class="game-title">Pizza Drift</h2>
+                
+                <!-- Conteneur des 3 images en diagonale -->
+                <div class="split-gallery">
+                    <div class="split-item item-1">
+                        <!-- Remplace l'URL par tes futures images 2D (ex: assets/terre.png) -->
+                        <div class="inner-img" style="background-image: url('');"><span>TERRE</span></div>
+                    </div>
+                    <div class="split-item item-2">
+                        <div class="inner-img" style="background-image: url('');"><span>GLACE</span></div>
+                    </div>
+                    <div class="split-item item-3">
+                        <div class="inner-img" style="background-image: url('');"><span>ROUTE</span></div>
+                    </div>
+                </div>
+                
+                <p class="game-desc">
+                    🍕 Livraison sur terrains variés (terre, route, glace, herbe) façon Trackmania.<br>
+                    🚗 Mode Multijoueur en 1v1v1v1v1 !
+                </p>
+                
+                <a href="https://pizzadrift.liliandev.com" class="play-button">
+                    <span class="play-icon">▶</span> JOUER MAINTENANT
+                </a>
+            </section>
+        </main>
     </div>
 
     <script src="script.js"></script>

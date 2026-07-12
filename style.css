@@ -1,96 +1,169 @@
-/* TEST FLASHBANG : TOUT EST BLANC */
 :root {
-    --primary-color: #ff4757;
-    --bg-color: #ffffff; /* Ancien: #1e272e */
-    --text-color: #000000; /* Ancien: #f1f2f6 */
-    --card-bg: #eccc68; /* On met la carte en jaune pétant pour être sûr ! */
+    --bg-color: #1a1b26; /* Fond sombre moderne */
+    --card-bg: #4a2111; /* Ton marron/chaud rappelant le design généré */
+    --card-border: #6a3018;
+    --primary-color: #d35400; 
+    --text-color: #f1f2f6;
+    --gold: #fbc531;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
-    padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
+    /* Ces 3 lignes forcent la page à faire exactement la taille de l'écran sans dépasser */
+    height: 100dvh; 
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh; 
+    width: 100%;
+    max-width: 450px;
+    height: 100%;
+    padding: 1rem 1rem 2rem 1rem;
 }
 
 header {
     text-align: center;
-    padding: 3rem 1rem 2rem 1rem;
+    margin-bottom: 0.5rem;
+    flex-shrink: 0; /* Empêche le header de s'écraser */
 }
 
 h1 {
-    margin: 0;
-    font-size: 2rem;
+    font-size: 1.6rem;
+    color: #ffffff;
+    margin-top: 0.5rem;
 }
 
 .subtitle {
-    color: #2f3542;
-    font-size: 1.1rem;
-    margin-top: 0.5rem;
-    font-weight: bold;
+    color: #a4b0be;
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
 }
 
 .container {
     width: 100%;
-    max-width: 500px;
-    padding: 1rem;
-    box-sizing: border-box;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre la carte verticalement s'il y a de la marge */
 }
 
 .game-card {
-    background-color: var(--card-bg);
-    border-radius: 15px;
-    padding: 2.5rem 1.5rem; 
+    background: linear-gradient(145deg, #3d1b0c, #5c2812);
+    border: 2px solid var(--card-border);
+    border-radius: 20px;
+    padding: 1.2rem;
     text-align: center;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5), inset 0 0 15px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem; /* Espace géré automatiquement entre les éléments */
+    max-height: 100%; /* S'assure que la carte ne dépasse pas du conteneur */
 }
 
 .game-title {
     font-size: 2.2rem;
-    margin: 0 0 1rem 0;
-    color: #000000;
+    color: var(--gold);
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    margin: 0;
 }
+
+/* LA GALERIE EN DIAGONALE */
+.split-gallery {
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+    /* La hauteur s'adapte à l'écran : 28% de la hauteur totale */
+    height: 28dvh; 
+    min-height: 120px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 3px solid var(--gold);
+    box-shadow: 0 0 12px rgba(251, 197, 49, 0.4);
+    background-color: #fff; /* Couleur des lignes de séparation */
+    gap: 4px; /* Épaisseur des lignes */
+    transform: skewX(-12deg); /* Incline tout le conteneur */
+}
+
+.split-item {
+    flex: 1;
+    overflow: hidden;
+}
+
+.inner-img {
+    /* On élargit l'image interne pour compenser l'inclinaison et éviter les bords vides */
+    width: 160%; 
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transform: skewX(12deg); /* Redresse l'image pour qu'elle ne soit pas déformée */
+    margin-left: -30%; /* Recentre l'image */
+    
+    /* Style pour les textes de remplacement temporaires */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    color: rgba(255,255,255,0.7);
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+/* Couleurs temporaires en attendant tes vrais visuels 2D */
+.item-1 .inner-img { background-color: #e1b12c; } 
+.item-2 .inner-img { background-color: #00a8ff; } 
+.item-3 .inner-img { background-color: #4cd137; } 
 
 .game-desc {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    color: #2f3542;
-    margin-bottom: 2rem;
-}
-
-/* L'IMAGE DOIT PRENDRE TOUTE LA PLACE */
-.game-image {
-    width: 100%; 
-    height: auto; 
-    border-radius: 10px; 
-    margin-bottom: 1.5rem; 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    display: block;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #f5f6fa;
+    background-color: rgba(0,0,0,0.25);
+    padding: 0.8rem;
+    border-radius: 12px;
+    margin: 0;
 }
 
 .play-button {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     width: 100%;
-    padding: 1.2rem;
-    background-color: var(--primary-color);
+    padding: 1.1rem;
+    background: linear-gradient(to bottom, #e74c3c, #c0392b);
     color: white;
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: bold;
     border-radius: 12px;
     text-transform: uppercase;
-    box-sizing: border-box;
-    transition: transform 0.1s, background-color 0.2s;
-    box-shadow: 0 4px 0 #ff1e33; 
+    border: 2px solid #ff7979;
+    box-shadow: 0 6px 0 #831d1d, 0 10px 15px rgba(0,0,0,0.4);
+    transition: transform 0.1s, box-shadow 0.1s;
 }
 
 .play-button:active {
-    transform: translateY(4px); 
-    box-shadow: 0 0 0 #ff1e33;
-    background-color: #ff6b81;
+    transform: translateY(6px); /* Effet d'enfoncement physique 3D */
+    box-shadow: 0 0 0 #831d1d, 0 2px 5px rgba(0,0,0,0.4);
+}
+
+.play-icon {
+    font-size: 1.2rem;
 }
