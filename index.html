@@ -2,105 +2,10 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <!-- C'est LA balise indispensable pour que le site s'adapte aux écrans de téléphone -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lilian Mathieu - Développeur Indépendant</title>
-    <style>
-        /* CSS Mobile-First */
-        :root {
-            --primary-color: #ff4757; /* Un rouge un peu pizza */
-            --bg-color: #1e272e; /* Fond sombre */
-            --text-color: #f1f2f6;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        header {
-            text-align: center;
-            padding: 2rem 1rem 1rem 1rem;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 1.8rem;
-        }
-
-        p.subtitle {
-            color: #a4b0be;
-            font-size: 1rem;
-            margin-top: 0.5rem;
-        }
-
-        /* Conteneur principal limité en largeur pour rester beau sur PC mais parfait sur mobile */
-        .container {
-            width: 100%;
-            max-width: 500px;
-            padding: 1rem;
-            box-sizing: border-box;
-        }
-
-        .game-card {
-            background-color: #2f3542;
-            border-radius: 15px;
-            padding: 1.5rem;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-            margin-bottom: 2rem;
-        }
-
-        .game-title {
-            font-size: 1.5rem;
-            margin: 0 0 1rem 0;
-        }
-
-        .game-image-placeholder {
-            width: 100%;
-            height: 200px;
-            background-color: #57606f;
-            border-radius: 10px;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #a4b0be;
-            font-style: italic;
-        }
-
-        /* Le gros bouton pour les joueurs mobiles */
-        .play-button {
-            display: block;
-            width: 100%;
-            padding: 1rem;
-            background-color: var(--primary-color);
-            color: white;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: bold;
-            border-radius: 10px;
-            text-transform: uppercase;
-            box-sizing: border-box;
-            transition: transform 0.1s, background-color 0.2s;
-        }
-
-        .play-button:active {
-            transform: scale(0.98);
-            background-color: #ff6b81;
-        }
-
-        .secondary-game {
-            opacity: 0.8;
-            font-size: 0.9rem;
-        }
-    </style>
+    <!-- On relie le fichier CSS ici -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -110,23 +15,32 @@
     </header>
 
     <div class="container">
+        <h2>Mes Jeux</h2>
+
         <!-- Section du jeu actuel -->
-        <section class="game-card">
-            <h2 class="game-title">Pizza Drift</h2>
-            <!-- Tu pourras remplacer cette div par une vraie balise <img> avec un beau screenshot de ta map -->
-            <div class="game-image-placeholder">Image / GIF du jeu ici</div>
+        <section class="game-card highlight">
+            <h3 class="game-title">Pizza Drift</h3>
+            <p class="game-desc">Arpentez les rues d'une carte de Paris faite main et livrez un maximum de pizzas !</p>
             
-            <!-- Lien direct vers ton site de production -->
+            <!-- C'est ICI que tu mets ton image/GIF. 
+                 Assure-toi que le nom du fichier correspond à ce que tu as dans ton dossier -->
+            <img src="assets/pizza-drift.gif" alt="Gameplay de Pizza Drift" class="game-image">
+            
             <a href="https://pizzadrift.liliandev.com" class="play-button">Jouer maintenant</a>
         </section>
 
-        <!-- Section des anciens jeux (optionnel) -->
+        <!-- Section de l'ancien jeu -->
         <section class="game-card secondary-game">
-            <h2 class="game-title">Ninja Tower</h2>
-            <p>Mon premier jeu d'arcade.</p>
-            <a href="#" class="play-button" style="background-color: #57606f;">Voir le projet</a>
+            <h3 class="game-title">Ninja Tower</h3>
+            <p class="game-desc">Mon premier jeu d'arcade 2D pixel art sans fin avec mécanique de wall-jump.</p>
+            <p class="warning-text"><em>Note : La base de données du classement peut mettre quelques secondes à se réveiller, soyez patients !</em></p>
+            
+            <!-- Remplace "#" par le vrai lien de ton jeu Ninja Tower -->
+            <a href="ninja-tower.vercel.app" class="play-button outline">Tester le jeu</a>
         </section>
     </div>
 
+    <!-- On relie le fichier Javascript tout en bas -->
+    <script src="script.js"></script>
 </body>
 </html>
