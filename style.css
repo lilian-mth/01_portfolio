@@ -18,27 +18,26 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     
-    /* On utilise min-height et svh pour s'adapter à la barre de nav */
+    /* Prend au minimum toute la hauteur de l'écran, barre de nav incluse */
     min-height: 100svh; 
     
-    /* On remet le scroll au cas où l'écran est vraiment minuscule (iPhone SE) */
-    overflow-y: auto; 
-    overflow-x: hidden;
-    
+    /* Structure en colonne pour permettre le scroll naturel */
     display: flex;
-    justify-content: flex-start; /* Aligne vers le haut au lieu du centre pour ne jamais couper le titre */
-    align-items: center;
+    flex-direction: column; 
+    overflow-x: hidden;
 }
 
 .app-wrapper {
+    /* flex-grow: 1 lui dit de prendre toute la hauteur disponible dans le body */
+    flex-grow: 1; 
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center; /* C'est ici que la magie du centrage vertical opère en toute sécurité */
     width: 100%;
     max-width: 450px;
-    min-height: 100%;
     padding: 1rem 1rem 2rem 1rem;
-    margin: auto; /* C'est la magie qui centre verticalement en toute sécurité */
+    margin: 0 auto; /* Centre horizontalement sur les grands écrans */
 }
 
 header {
