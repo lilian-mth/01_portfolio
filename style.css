@@ -172,3 +172,22 @@ h1 {
 .play-icon {
     font-size: 1.2rem;
 }
+
+/* --- FOOTER ET LIENS LÉGAUX --- */
+.site-footer {
+    margin-top: 1.5rem;
+    text-align: center;
+    flex-shrink: 0; /* Empêche le footer d'être écrasé */
+}
+
+.legal-link {
+    color: #a4b0be; /* Utilise le même gris que ton sous-titre */
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.2s ease;
+}
+
+.legal-link:hover {
+    color: var(--gold); /* Devient jaune/doré au survol */
+    text-decoration: underline;
+}
