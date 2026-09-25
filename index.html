@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LilianDev | Développeur de Jeux Indépendant</title>
+    <title>LilianDev | Indie Game Developer</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -81,11 +81,11 @@
                 PORTFOLIO 2026
             </div>
             <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
-                Créateur d'expériences <br>
-                <span class="text-gradient">ludiques et interactives</span>
+                Indie <br>
+                <span class="text-gradient">Game Developer</span>
             </h1>
             <p class="text-lg md:text-xl text-slate-400 max-w-2xl mb-10 leading-relaxed">
-                Je suis Lilian, un développeur de jeux indépendant. Je conçois des jeux dynamiques, de la génération procédurale au pixel art rétro. Découvrez mes dernières créations ci-dessous.
+                Je suis Lilian, développeur de jeux indépendant. Je me spécialise dans la création de jeux de type "endless" ultra-dynamiques, en intégrant des mécaniques multijoueurs et compétitives. Découvrez mes créations ci-dessous.
             </p>
             <div class="flex gap-4 flex-wrap justify-center">
                 <a href="#projets" class="px-8 py-4 rounded-xl bg-primary hover:bg-indigo-600 text-white font-semibold transition-all shadow-lg shadow-primary/30 flex items-center gap-2">
@@ -103,32 +103,34 @@
                 <div class="w-20 h-1 bg-gradient-to-r from-primary to-purple-600 rounded-full"></div>
             </div>
 
-            <!-- Conteneur des projets (En colonne verticale) -->
             <div class="flex flex-col gap-16">
 
-                <!-- PROJET 1: Ninja Tower (Image à gauche, Bouton à droite) -->
+                <!-- PROJET 1: Ninja Tower -->
                 <article class="project-card bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-8 md:gap-12 group">
                     
-                    <!-- Zone Image (Format Mobile 9:16) -->
+                    <!-- Zone Image Ninja Tower -->
                     <div class="relative w-full md:w-64 aspect-[9/16] rounded-2xl overflow-hidden bg-slate-800 shrink-0 shadow-2xl">
-                        <!-- Remplace l'URL src par le chemin de ton image dans le dossier, par exemple src="images/ninja-tower.jpg" -->
                         <img src="assets/ninja_screen.png" alt="Ninja Tower Screenshot" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-transparent to-transparent opacity-80"></div>
-                        <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
+                        
+                        <!-- Badges Ninja Tower -->
+                        <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-2 flex-wrap px-2">
                             <span class="px-3 py-1 text-xs font-bold bg-purple-900/80 backdrop-blur-md text-purple-200 rounded-full border border-purple-700/50">Pixel Art</span>
+                            <span class="px-3 py-1 text-xs font-bold bg-blue-900/80 backdrop-blur-md text-blue-200 rounded-full border border-blue-700/50">Godot 4</span>
+                            <span class="px-3 py-1 text-xs font-bold bg-orange-900/80 backdrop-blur-md text-orange-200 rounded-full border border-orange-700/50">Endless</span>
                         </div>
                     </div>
                     
-                    <!-- Contenu textuel -->
+                    <!-- Contenu textuel Ninja Tower -->
                     <div class="flex-grow text-center md:text-left">
                         <h3 class="text-3xl font-bold mb-4 group-hover:text-primary transition-colors">Ninja Tower</h3>
                         <p class="text-slate-400 text-lg mb-6 leading-relaxed">
-                            Un jeu de course sans fin (endless runner) en pixel art 2D axé sur des mécaniques dynamiques de sauts muraux. 
-                            Le jeu est exporté en tant que Progressive Web App (PWA) fluide, incluant un classement mondial en temps réel propulsé par <strong>Supabase</strong>.
+                            Un jeu de course sans fin (endless runner) en pixel art 2D dont la mécanique centrale repose sur le <strong>wall jump</strong>. 
+                            Le jeu est exporté en tant que Progressive Web App (PWA) ultra-fluide, avec un vrai classement mondial en temps réel géré par <strong>Supabase</strong>.
                         </p>
                     </div>
 
-                    <!-- Gros bouton d'action à droite -->
+                    <!-- Bouton Ninja Tower -->
                     <div class="shrink-0 w-full md:w-auto flex justify-center md:justify-end">
                         <a href="https://ninja-tower.vercel.app/" target="_blank" class="inline-flex items-center justify-center w-full md:w-auto px-8 py-5 rounded-2xl bg-primary hover:bg-indigo-600 text-white font-bold text-lg transition-transform hover:scale-105 shadow-lg shadow-primary/30">
                             <i class="fa-solid fa-play mr-3"></i> Jouer au jeu
@@ -137,41 +139,32 @@
                 </article>
 
 
-                <!-- PROJET 2: Pizza Drift (Bouton à gauche, Image à droite pour casser la symétrie) -->
+                <!-- PROJET 2: Pizza Drift -->
                 <article class="project-card bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-3xl p-6 md:p-8 flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12 group">
                     
-                   <!-- Zone Vidéo YouTube (Format Mobile 9:16) -->
+                    <!-- Zone Image Pizza Drift -->
                     <div class="relative w-full md:w-64 aspect-[9/16] rounded-2xl overflow-hidden bg-slate-800 shrink-0 shadow-2xl">
-                        
-                       
-                        
-                        <!-- Remplace l'URL src par le chemin de ton image dans le dossier, par exemple src="images/ninja-tower.jpg" -->
                         <img src="assets/Ice.png" alt="Pizza drift Screenshot" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-transparent to-transparent opacity-80"></div>
-                        <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
-                            <span class="px-3 py-1 text-xs font-bold bg-purple-900/80 backdrop-blur-md text-purple-200 rounded-full border border-purple-700/50">Pixel Art</span>
-                        </div>
-                        
-
-                        <!-- Le dégradé sombre en bas pour que le texte reste lisible (optionnel) -->
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-transparent to-transparent opacity-80 pointer-events-none"></div>
                         
-                        <!-- Les badges (qui restent par-dessus la vidéo) -->
-                        <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-2 pointer-events-none">
+                        <!-- Badges Pizza Drift -->
+                        <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-2 flex-wrap px-2 pointer-events-none">
                             <span class="px-3 py-1 text-xs font-bold bg-blue-900/80 backdrop-blur-md text-blue-200 rounded-full border border-blue-700/50">Godot 4</span>
+                            <span class="px-3 py-1 text-xs font-bold bg-red-900/80 backdrop-blur-md text-red-200 rounded-full border border-red-700/50">Multijoueur</span>
+                            <span class="px-3 py-1 text-xs font-bold bg-green-900/80 backdrop-blur-md text-green-200 rounded-full border border-green-700/50">Drift</span>
                         </div>
                     </div>
                     
-                    <!-- Contenu textuel -->
+                    <!-- Contenu textuel Pizza Drift -->
                     <div class="flex-grow text-center md:text-left">
                         <h3 class="text-3xl font-bold mb-4 group-hover:text-blue-400 transition-colors">Pizza Drift</h3>
                         <p class="text-slate-400 text-lg mb-6 leading-relaxed">
                             Jeu mobile de livraison en dérapage avec vue de dessus (top-down), développé sur <strong>Godot 4</strong>. 
-                            Il met en avant des graphismes vectoriels nets, une génération procédurale de morceaux de terrain pour une rejouabilité infinie, et un moteur physique gérant de multiples surfaces.
+                            L'accent est mis sur le multijoueur asynchrone : affrontez le classement mondial, débloquez des skins et maîtrisez un moteur physique exigeant qui gère de multiples surfaces de glisse.
                         </p>
                     </div>
 
-                    <!-- Gros bouton d'action à gauche -->
+                    <!-- Bouton Pizza Drift -->
                     <div class="shrink-0 w-full md:w-auto flex justify-center md:justify-start">
                         <a href="https://play.google.com/store/apps/details?id=com.lilian.dev.pizzadrift&hl=en" target="_blank" class="inline-flex items-center justify-center w-full md:w-auto px-8 py-5 rounded-2xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-lg transition-transform hover:scale-105 shadow-lg shadow-blue-500/30">
                             <i class="fa-brands fa-google-play mr-3"></i> Télécharger
@@ -182,14 +175,13 @@
             </div>
         </section>
 
-        <!-- Section Contact / Redirection automatique vers Gmail -->
+        <!-- Section Contact -->
         <section id="contact" class="max-w-4xl w-full mx-auto px-6 py-20 text-center">
             <div class="p-12 rounded-3xl bg-gradient-to-br from-slate-900 to-darker border border-slate-800 shadow-2xl relative overflow-hidden">
                 <div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full filter blur-[40px]"></div>
                 <h2 class="text-3xl font-bold mb-4 relative z-10">Envie de discuter d'un projet ?</h2>
                 <p class="text-slate-400 mb-8 max-w-lg mx-auto relative z-10">Que ce soit pour une collaboration, un retour sur un de mes jeux ou juste pour dire bonjour, n'hésitez pas à me contacter.</p>
                 
-                <!-- Lien magique pour ouvrir Gmail dans le navigateur avec l'adresse pré-remplie -->
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=liliandev1407@gmail.com" target="_blank" class="inline-block px-8 py-4 rounded-xl bg-white text-darker font-bold hover:bg-slate-200 transition-colors shadow-lg relative z-10">
                     <i class="fa-solid fa-envelope mr-2"></i> M'envoyer un mail via Gmail
                 </a>
@@ -198,14 +190,13 @@
 
     </main>
 
-    <!-- Pied de page officiel avec Instagram uniquement -->
+    <!-- Pied de page -->
     <footer class="border-t border-white/5 bg-darker py-8 z-10 relative">
         <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
             <p class="text-slate-500 text-sm">
                 &copy; 2026 LilianDev. Tous droits réservés.
             </p>
             <div class="flex gap-4 text-slate-400">
-                <!-- Lien Instagram -->
                 <a href="https://instagram.com/TON_COMPTE_ICI" target="_blank" class="hover:text-white transition-colors p-2">
                     <i class="fa-brands fa-instagram text-2xl"></i>
                 </a>
