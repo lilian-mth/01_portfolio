@@ -5,16 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LilianDev | Développeur de Jeux Indépendant</title>
     
-    <!-- Intégration de Tailwind CSS pour le style rapide et responsive -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Intégration de FontAwesome pour les icônes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Intégration de Google Fonts (Outfit pour un look moderne et géométrique) -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     
-    <!-- Configuration personnalisée de Tailwind -->
     <script>
         tailwind.config = {
             theme: {
@@ -23,10 +17,10 @@
                         sans: ['Outfit', 'sans-serif'],
                     },
                     colors: {
-                        dark: '#0f172a',      // slate-900
-                        darker: '#020617',    // slate-950
-                        primary: '#6366f1',   // indigo-500
-                        accent: '#10b981',    // emerald-500
+                        dark: '#0f172a',
+                        darker: '#020617',
+                        primary: '#6366f1',
+                        accent: '#10b981',
                     }
                 }
             }
@@ -34,22 +28,18 @@
     </script>
 
     <style>
-        /* Styles personnalisés pour compléter Tailwind */
         body {
-            background-color: #020617; /* darker */
-            color: #f8fafc; /* slate-50 */
+            background-color: #020617;
+            color: #f8fafc;
         }
         
-        /* Effet de brillance subtil sur les cartes au survol */
         .project-card {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .project-card:hover {
-            transform: translateY(-8px);
             box-shadow: 0 20px 40px -10px rgba(99, 102, 241, 0.15);
         }
         
-        /* Gradient de texte animé */
         .text-gradient {
             background-clip: text;
             -webkit-background-clip: text;
@@ -60,11 +50,9 @@
 </head>
 <body class="antialiased min-h-screen flex flex-col relative overflow-x-hidden">
 
-    <!-- Éléments de fond décoratifs (Gradients flous) -->
     <div class="fixed top-[-10%] left-[-10%] w-96 h-96 bg-primary/20 rounded-full mix-blend-screen filter blur-[100px] pointer-events-none z-0"></div>
     <div class="fixed bottom-[-10%] right-[-10%] w-96 h-96 bg-purple-500/10 rounded-full mix-blend-screen filter blur-[100px] pointer-events-none z-0"></div>
 
-    <!-- En-tête / Navbar -->
     <header class="fixed w-full top-0 z-50 bg-darker/80 backdrop-blur-md border-b border-white/5">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-2xl font-extrabold tracking-tighter flex items-center gap-2 group">
@@ -80,17 +68,14 @@
                 <a href="#contact" class="hover:text-white transition-colors">Contact</a>
             </nav>
             
-            <!-- Menu burger pour mobile -->
             <button class="md:hidden text-slate-300 hover:text-white">
                 <i class="fa-solid fa-bars text-xl"></i>
             </button>
         </div>
     </header>
 
-    <!-- Contenu Principal -->
     <main class="flex-grow z-10 flex flex-col items-center pt-32 pb-16">
         
-        <!-- Section Hero -->
         <section id="accueil" class="max-w-6xl w-full mx-auto px-6 py-20 flex flex-col items-center text-center">
             <div class="inline-block py-1 px-3 rounded-full bg-white/5 border border-white/10 text-xs font-semibold tracking-wide text-primary mb-6 backdrop-blur-sm">
                 PORTFOLIO 2026
@@ -112,108 +97,111 @@
             </div>
         </section>
 
-        <!-- Section Projets -->
         <section id="projets" class="max-w-6xl w-full mx-auto px-6 py-24 scroll-mt-20">
             <div class="flex flex-col items-center mb-16 text-center">
-                <h2 class="text-3xl md:text-5xl font-bold mb-4">Jeux Récents</h2>
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Mes Jeux</h2>
                 <div class="w-20 h-1 bg-gradient-to-r from-primary to-purple-600 rounded-full"></div>
             </div>
 
-            <!-- Grille de Projets (Responsive: 1 colonne sur mobile, 2 sur bureau) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <!-- Conteneur des projets (En colonne verticale) -->
+            <div class="flex flex-col gap-16">
 
-                <!-- PROJET 1: Ninja Tower -->
-                <article class="project-card bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-3xl overflow-hidden flex flex-col h-full group">
-                    <!-- Image du projet avec overlay au survol -->
-                    <div class="relative h-64 overflow-hidden bg-slate-800">
-                        <img src="https://placehold.co/800x600/1e293b/a78bfa?text=Ninja+Tower+Gameplay" alt="Ninja Tower" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.src='https://placehold.co/800x600/1e293b/a78bfa?text=Image+Indisponible'">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
-                        <div class="absolute bottom-4 left-4 flex gap-2">
-                            <span class="px-3 py-1 text-xs font-bold bg-slate-800/80 backdrop-blur-md text-white rounded-full border border-slate-700">Web / PWA</span>
-                            <span class="px-3 py-1 text-xs font-bold bg-purple-900/80 backdrop-blur-md text-purple-200 rounded-full border border-purple-700/50">Pixel Art 2D</span>
+                <!-- PROJET 1: Ninja Tower (Image à gauche, Bouton à droite) -->
+                <article class="project-card bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-8 md:gap-12 group">
+                    
+                    <!-- Zone Image (Format Mobile 9:16) -->
+                    <div class="relative w-full md:w-64 aspect-[9/16] rounded-2xl overflow-hidden bg-slate-800 shrink-0 shadow-2xl">
+                        <!-- Remplace l'URL src par le chemin de ton image dans le dossier, par exemple src="images/ninja-tower.jpg" -->
+                        <img src="ninja_screen.png" alt="Ninja Tower Screenshot" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-transparent to-transparent opacity-80"></div>
+                        <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
+                            <span class="px-3 py-1 text-xs font-bold bg-purple-900/80 backdrop-blur-md text-purple-200 rounded-full border border-purple-700/50">Pixel Art</span>
                         </div>
                     </div>
                     
-                    <!-- Contenu textuel de la carte -->
-                    <div class="p-8 flex flex-col flex-grow">
-                        <h3 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Ninja Tower</h3>
-                        <p class="text-slate-400 mb-6 flex-grow leading-relaxed">
+                    <!-- Contenu textuel -->
+                    <div class="flex-grow text-center md:text-left">
+                        <h3 class="text-3xl font-bold mb-4 group-hover:text-primary transition-colors">Ninja Tower</h3>
+                        <p class="text-slate-400 text-lg mb-6 leading-relaxed">
                             Un jeu de course sans fin (endless runner) en pixel art 2D axé sur des mécaniques dynamiques de sauts muraux. 
                             Le jeu est exporté en tant que Progressive Web App (PWA) fluide, incluant un classement mondial en temps réel propulsé par <strong>Supabase</strong>.
                         </p>
-                        
-                        <!-- Bouton d'action -->
-                        <div class="mt-auto pt-4 border-t border-slate-800">
-                            <a href="https://ninja-tower.vercel.app/" class="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 rounded-xl bg-white/5 hover:bg-primary text-white font-semibold transition-colors group/btn border border-white/5 hover:border-transparent">
-                                <i class="fa-solid fa-play mr-2 text-primary group-hover/btn:text-white transition-colors"></i> Jouer sur le Web
-                            </a>
-                        </div>
+                    </div>
+
+                    <!-- Gros bouton d'action à droite -->
+                    <div class="shrink-0 w-full md:w-auto flex justify-center md:justify-end">
+                        <a href="https://ninja-tower.vercel.app/" target="_blank" class="inline-flex items-center justify-center w-full md:w-auto px-8 py-5 rounded-2xl bg-primary hover:bg-indigo-600 text-white font-bold text-lg transition-transform hover:scale-105 shadow-lg shadow-primary/30">
+                            <i class="fa-solid fa-play mr-3"></i> Jouer au jeu
+                        </a>
                     </div>
                 </article>
 
-                <!-- PROJET 2: Pizza Drift -->
-                <article class="project-card bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-3xl overflow-hidden flex flex-col h-full group">
-                    <!-- Image du projet avec overlay au survol -->
-                    <div class="relative h-64 overflow-hidden bg-slate-800">
-                        <img src="https://placehold.co/800x600/1e293b/38bdf8?text=Pizza+Drift+Screenshot" alt="Pizza Drift" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.src='https://placehold.co/800x600/1e293b/38bdf8?text=Image+Indisponible'">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
-                        <div class="absolute bottom-4 left-4 flex gap-2">
-                            <span class="px-3 py-1 text-xs font-bold bg-green-900/80 backdrop-blur-md text-green-200 rounded-full border border-green-700/50">Mobile</span>
+
+                <!-- PROJET 2: Pizza Drift (Bouton à gauche, Image à droite pour casser la symétrie) -->
+                <article class="project-card bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-3xl p-6 md:p-8 flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12 group">
+                    
+                    <!-- Zone Image (Format Mobile 9:16) -->
+                    <div class="relative w-full md:w-64 aspect-[9/16] rounded-2xl overflow-hidden bg-slate-800 shrink-0 shadow-2xl">
+                        <!-- Remplace l'URL src par le chemin de ton image dans le dossier, par exemple src="images/pizza-drift.jpg" -->
+                        <img src="https://placehold.co/720x1280/1e293b/38bdf8?text=Pizza+Drift+Vertical" alt="Pizza Drift Screenshot" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-transparent to-transparent opacity-80"></div>
+                        <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
                             <span class="px-3 py-1 text-xs font-bold bg-blue-900/80 backdrop-blur-md text-blue-200 rounded-full border border-blue-700/50">Godot 4</span>
                         </div>
                     </div>
                     
-                    <!-- Contenu textuel de la carte -->
-                    <div class="p-8 flex flex-col flex-grow">
-                        <h3 class="text-2xl font-bold mb-3 group-hover:text-blue-400 transition-colors">Pizza Drift</h3>
-                        <p class="text-slate-400 mb-6 flex-grow leading-relaxed">
+                    <!-- Contenu textuel -->
+                    <div class="flex-grow text-center md:text-left">
+                        <h3 class="text-3xl font-bold mb-4 group-hover:text-blue-400 transition-colors">Pizza Drift</h3>
+                        <p class="text-slate-400 text-lg mb-6 leading-relaxed">
                             Jeu mobile de livraison en dérapage avec vue de dessus (top-down), développé sur <strong>Godot 4</strong>. 
                             Il met en avant des graphismes vectoriels nets, une génération procédurale de morceaux de terrain pour une rejouabilité infinie, et un moteur physique gérant de multiples surfaces.
                         </p>
-                        
-                        <!-- Bouton d'action -->
-                        <div class="mt-auto pt-4 border-t border-slate-800">
-                            <a href="https://play.google.com/store/apps/details?id=com.lilian.dev.pizzadrift&hl=en" class="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 rounded-xl bg-white/5 hover:bg-blue-600 text-white font-semibold transition-colors group/btn border border-white/5 hover:border-transparent">
-                                <i class="fa-brands fa-google-play mr-2 text-blue-400 group-hover/btn:text-white transition-colors"></i> Télécharger sur Google Play
-                            </a>
-                        </div>
+                    </div>
+
+                    <!-- Gros bouton d'action à gauche -->
+                    <div class="shrink-0 w-full md:w-auto flex justify-center md:justify-start">
+                        <a href="https://play.google.com/store/apps/details?id=com.lilian.dev.pizzadrift&hl=en" target="_blank" class="inline-flex items-center justify-center w-full md:w-auto px-8 py-5 rounded-2xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-lg transition-transform hover:scale-105 shadow-lg shadow-blue-500/30">
+                            <i class="fa-brands fa-google-play mr-3"></i> Télécharger
+                        </a>
                     </div>
                 </article>
 
             </div>
         </section>
 
-        <!-- Section Contact / Call to action basique -->
+        <!-- Section Contact / Redirection automatique vers Gmail -->
         <section id="contact" class="max-w-4xl w-full mx-auto px-6 py-20 text-center">
             <div class="p-12 rounded-3xl bg-gradient-to-br from-slate-900 to-darker border border-slate-800 shadow-2xl relative overflow-hidden">
                 <div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full filter blur-[40px]"></div>
                 <h2 class="text-3xl font-bold mb-4 relative z-10">Envie de discuter d'un projet ?</h2>
                 <p class="text-slate-400 mb-8 max-w-lg mx-auto relative z-10">Que ce soit pour une collaboration, un retour sur un de mes jeux ou juste pour dire bonjour, n'hésitez pas à me contacter.</p>
-                <a href="mailto:liliandev1407@gmail.com" class="inline-block px-8 py-4 rounded-xl bg-white text-darker font-bold hover:bg-slate-200 transition-colors shadow-lg relative z-10">
-                    <i class="fa-solid fa-envelope mr-2"></i> liliandev1407@gmail.com
+                
+                <!-- Lien magique pour ouvrir Gmail dans le navigateur avec l'adresse pré-remplie -->
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=liliandev1407@gmail.com" target="_blank" class="inline-block px-8 py-4 rounded-xl bg-white text-darker font-bold hover:bg-slate-200 transition-colors shadow-lg relative z-10">
+                    <i class="fa-solid fa-envelope mr-2"></i> M'envoyer un mail via Gmail
                 </a>
             </div>
         </section>
 
     </main>
 
-    <!-- Pied de page officiel -->
+    <!-- Pied de page officiel avec Instagram uniquement -->
     <footer class="border-t border-white/5 bg-darker py-8 z-10 relative">
         <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
             <p class="text-slate-500 text-sm">
                 &copy; 2026 LilianDev. Tous droits réservés.
             </p>
             <div class="flex gap-4 text-slate-400">
-                <a href="#" class="hover:text-white transition-colors p-2"><i class="fa-brands fa-twitter text-xl"></i></a>
-                <a href="#" class="hover:text-white transition-colors p-2"><i class="fa-brands fa-itch-io text-xl"></i></a>
-                <a href="#" class="hover:text-white transition-colors p-2"><i class="fa-brands fa-github text-xl"></i></a>
+                <!-- Lien Instagram -->
+                <a href="https://instagram.com/TON_COMPTE_ICI" target="_blank" class="hover:text-white transition-colors p-2">
+                    <i class="fa-brands fa-instagram text-2xl"></i>
+                </a>
             </div>
         </div>
     </footer>
 
-    <!-- Script simple pour la navigation mobile (optionnel pour l'avenir) -->
     <script>
-        // Ce script permet d'ajouter de l'interactivité basique si besoin plus tard
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
